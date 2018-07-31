@@ -1,8 +1,8 @@
-Project Overview
-In an existing project given to me by Udacity for my nanodegree course, using Jasmine to test if the Javascript is working properly.
+Project Overview </br>
+Using an existing project given to me by Udacity for my nanodegree course, using Jasmine to test if the Javascript is working properly.
 
 How to Run Appilcation
-Download repositrory from here. Then open the index.html file in a browser.
+Download repositrory then open the index.html file in a browser.
 
 Tests That Were Implemented
 Tests for allfeeds has been defined and that it is not empty
@@ -12,7 +12,3 @@ Searches for the class of 'menu-hidden' in the body tag and checks that the menu
 Toggles on click event if the menu appears or disappears
 Tests if the loadFeed function has at least a single '.entry' within the '.feed' container
 Tests to see if two entries are not equal
-
-Udacity Instructions
-
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included Jasmine and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
