@@ -77,27 +77,33 @@ $(function() {
 
     //The New Feed Selection (Test suite)
     describe('New Feed Selection', function() {
+        //Declare two varibles to hold the .feed content states
+        var before, after;
+
         // Make sure that the new feed is loaded via loadFeed()
         beforeEach(function (done) {
-            // Feeds are empty
-            $('.feed').empty();
+        
             // Load the first feed
-            loadFeed(0, function () {
-                //Search for the first URL
-                before = $('.feed').find(allFeeds.url);
-                done();
-            }); //end of loadFeed
             loadFeed(1, function () {
-                //Search for the second URL
-                after = $('.feed').find(allFeeds.url);
-                done();
+                    //get feed value before
+                    before = $('.feed').html();
+                    //load for the second URL
+                    loadFeed(2, function () {
+                    done();
+                    }); //end of loadFeed
             }); //end of loadFeed
-            
+
         }); //end of beforeEach
+
+        afterEach(function() {
+            loadFeed(0);
+        });
 
         //Make sure that the content actually changes
         it('CHANGE', function(){
-            expect(before).not.toBe(after);
+            //get feed value after
+            after = $('.feed').html();
+            expect(before).not.toEqual(after);
         }); //end of CHANGE
 
     }); //end of The New Feed Selection (Test suite)
